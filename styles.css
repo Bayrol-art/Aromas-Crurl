@@ -1,0 +1,73 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS: PORTAL DE INICIO (styles-inicio.css)
+   ========================================================================== */
+:root {
+    --bg: #0a080d;
+    --gold: #d4af37;
+    --crimson: #ff0055;
+    --texto: #c4b9d0;
+    --fuente-titulo: 'Cormorant Garamond', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: #fff; font-family: var(--fuente-cuerpo); overflow-x: hidden; }
+
+/* Fondo de luz difusa */
+.ambient-light {
+    position: fixed; top: -10%; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 500px;
+    background: radial-gradient(circle, rgba(255, 0, 85, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+/* Header de la página */
+header {
+    background: rgba(10, 8, 13, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 5%; position: sticky; top: 0; z-index: 100;
+}
+.logo { font-family: var(--fuente-titulo); font-size: 1.8rem; font-weight: 700; color: #fff; }
+.logo span { color: var(--crimson); }
+.logo i { color: var(--gold); }
+
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { color: var(--texto); text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; }
+nav a:hover, nav a.active { color: var(--gold); border-bottom: 2px solid var(--crimson); padding-bottom: 5px; }
+
+.btn-header { border: 1px solid var(--gold); color: var(--gold); padding: 8px 18px; border-radius: 20px; text-decoration: none; font-size: 0.8rem; }
+.btn-header:hover { background: var(--gold); color: var(--bg); }
+
+/* Banner Hero con Holograma */
+.hero { min-height: 85vh; display: flex; align-items: center; padding: 50px 8%; }
+.hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; width: 100%; }
+.badge { background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+.hero-text h1 { font-family: var(--fuente-titulo); font-size: 3.8rem; margin: 20px 0; }
+.hero-text h1 span { color: var(--crimson); }
+.hero-text p { color: var(--texto); margin-bottom: 30px; line-height: 1.6; }
+
+/* Botones */
+.hero-btns { display: flex; gap: 15px; }
+.btn { padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+.btn-primary { background: linear-gradient(45deg, var(--crimson), #8a2be2); color: #fff; }
+.btn-secondary { border: 1px solid var(--gold); color: var(--gold); }
+
+/* Holograma 3D */
+.holo-container { display: flex; justify-content: center; perspective: 1000px; }
+.holo-card {
+    width: 280px; height: 360px; background: rgba(255, 0, 85, 0.05);
+    border: 1px solid rgba(255, 0, 85, 0.4); border-radius: 20px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    position: relative; animation: float 4s infinite alternate ease-in-out;
+}
+.holo-ring { position: absolute; width: 200px; height: 200px; border: 2px dashed var(--gold); border-radius: 50%; animation: spin 10s linear infinite; }
+.holo-scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,0,85,0.1) 4px); }
+.bottle-icon { font-size: 5rem; color: var(--gold); text-shadow: 0 0 15px var(--crimson); margin-bottom: 15px; }
+
+@keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-15px); } }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+footer { text-align: center; padding: 20px; border-top: 1px solid rgba(212,175,55,0.1); color: var(--texto); font-size: 0.8rem; }
+footer span { color: var(--gold); }

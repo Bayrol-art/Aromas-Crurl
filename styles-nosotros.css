@@ -1,0 +1,32 @@
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS: PORTAL SOBRE NOSOTROS (styles-nosotros.css)
+   ========================================================================== */
+body { background: #070707; color: #fff; font-family: 'Montserrat', sans-serif; margin: 0; }
+
+header {
+    background: rgba(7, 7, 7, 0.95); border-bottom: 1px solid #d4af37;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 5%; position: sticky; top: 0; z-index: 100;
+}
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; }
+.logo span { color: #ff0055; }
+.logo i { color: #d4af37; }
+
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { color: #c4b9d0; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; }
+nav a:hover, nav a.active { color: #d4af37; border-bottom: 2px solid #ff0055; }
+
+.btn-header { border: 1px solid #d4af37; color: #d4af37; padding: 8px 18px; border-radius: 20px; text-decoration: none; }
+
+.nosotros-section { min-height: 75vh; display: flex; align-items: center; justify-content: center; padding: 40px 8%; }
+.nosotros-card {
+    max-width: 700px; background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.3); padding: 50px;
+    border-radius: 20px; text-align: center;
+}
+
+.nosotros-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: #f3e3a1; margin-bottom: 20px; }
+.cita { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; text-align: true; color: #ff0055; margin-bottom: 25px; }
+.nosotros-card p { color: #c4b9d0; line-height: 1.8; }
+
+footer { text-align: center; padding: 20px; color: #c4b9d0; font-size: 0.8rem; border-top: 1px solid rgba(212, 175, 55, 0.1); }
